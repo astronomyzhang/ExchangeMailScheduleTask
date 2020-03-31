@@ -46,7 +46,7 @@ public class ScheduledEmailTask {
     @Scheduled(cron = "0 30 23 1 * ?")
     private void deleteEmail(){
         ExchangeService service = new ExchangeService(ExchangeVersion.Exchange2010_SP2);
-        ExchangeCredentials credentials = new WebCredentials("username", "password","crhd0a");
+        ExchangeCredentials credentials = new WebCredentials("username", "password","domain");
         service.setCredentials(credentials);
 
         int size = 10;
